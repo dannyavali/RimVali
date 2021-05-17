@@ -32,7 +32,7 @@
     <defName>AvaliSolider</defName>
     <title>Illuminate Solider</title>
     <titleShort>Solider</titleShort>
-    <baseDescription>[PAWN_nameDef] was a solider for the Illuminate. [PAWN_pronoun] was taught many combat tatics, as well as basic first aid.</baseDescription>
+    <baseDescription>[PAWN_nameDef] was a solider for the Illuminate. [PAWN_pronoun] was trained in various combat tactics, as well as basic first aid.</baseDescription>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimValiBackstories</li>
@@ -57,7 +57,7 @@
     <defName>AvaliFarmer</defName>
     <title>Farmer</title>
     <titleShort>Farmer</titleShort>
-    <baseDescription>On Avalon, [PAWN_nameDef] was a farmer. [PAWN_pronoun] mainly worked with the few plants/microorganisms, due to the conditions on avalon.</baseDescription>
+    <baseDescription>On Avalon, [PAWN_nameDef] was a farmer. [PAWN_pronoun] primarily worked with the few plants and microorganisms that were able to readily grow in the planet's harsh environment.</baseDescription>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimValiBackstories</li>
@@ -78,7 +78,7 @@
     <defName>AvaliResearcher</defName>
     <title>Illuminate Researcher</title>
     <titleShort>Researcher</titleShort>
-    <baseDescription>[PAWN_nameDef] was a researcher for the Illuminate. Even now, they still are, occasionally reporting their scientific findings back to the Illuminate, when [PAWN_pronoun] can.</baseDescription>
+    <baseDescription>[PAWN_nameDef] was a researcher for the Illuminate. Even now, they are still occasionally reporting their scientific findings back to the Illuminate, when [PAWN_pronoun] can.</baseDescription>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimValiBackstories</li>
@@ -95,7 +95,7 @@
     <defName>AvaliBuilder</defName>
     <title>Builder</title>
     <titleShort>Builder</titleShort>
-    <baseDescription>[PAWN_nameDef] learned to construct permanent buildings, and helped with the construction of more permanent settlements on avalon. Now, they are being sent to help construct buildings on other planets.</baseDescription>
+    <baseDescription>[PAWN_nameDef] learned to construct permanent buildings, and helped with the construction of more permanent settlements on Avalon. Now, they are being sent to help construct buildings on other planets.</baseDescription>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>RimValiBackstories</li>
@@ -107,4 +107,114 @@
       </li>
     </skillGains>
   </AlienRace.BackstoryDef>
-</Defs>
+
+  <AvaliMod.RVRBackstory>
+    <defName>NoviceDeveloper</defName>
+    <title>Novice Developer</title>
+    
+    <storyDesc>[PAWN_nameDef] was a hobbyist programmer and modeler. [PAWN_pronoun] independently developed several small applications and created various virtual items for use on the Nexus.</storyDesc>
+    
+    <globalChance>5</globalChance> <!-- I have no idea what would be a good value for this -->
+    
+    <spawnInCategories>
+      <li>RimValiBackstories</li>
+    </spawnInCategories>
+    
+    <skillGains> <!-- May need rebalancing -->
+      <li>
+        <skill>Crafting</skill>
+        <amount>1</amount>
+      </li>
+      <li>
+        <skill>Artistic</skill>
+        <amount>1</amount>
+      </li>
+        <skill>Intellectual</skill>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+
+  </AvaliMod.RVRBackstory>
+
+  <AvaliMod.RVRBackstory ParentName = "MaleBase">
+    <defName>NezaiStoryAdult</defName>
+    <title>Nezai</title>
+    <shortTitle>Nezai</shortTitle>
+    <storyDesc>After a catastrophic accident killed two of his packmates and crippled two more, as the healthy one, Nezai gave up his passions to become a mercenary in order to keep up with his pack's medical costs. He grew cold and bitter to most, and getting stranded here didn't help either.</storyDesc>
+    <backstorySlot>Adulthood</backstorySlot>
+    <spawnInCategories>
+      <li>NezaiStory</li>
+      <li>Unique</li>
+    </spawnInCategories>
+    <!--The skills gained-->
+    <!--List of skills: Medicine, Melee, Shooting, Cooking, Crafting, Social, Intellectual-->
+    <skillGains>
+      <li>
+        <skill>Melee</skill>
+        <amount>4</amount>
+      </li>
+      <li>
+          <skill>Shooting</skill>
+          <amount>4</amount>
+      </li>
+      <li>
+        <skill>Social</skill>
+        <amount>-2</amount>
+      </li>
+    </skillGains>
+    <forcedTraits>
+      <li>
+    <def>Tough</def>
+      </li>
+      <li>
+    <def>Abrasive</def>
+      </li>
+      <li>
+      <!-- For some reason Iron-willed is part of the defName "Nerves" trait, on spectrum 2. Kinda wonder but it doesn't matter too much. -->
+      <!-- 
+<TraitDef>
+    <defName>Nerves</defName>
+    <commonality>2</commonality>
+    <degreeDatas>
+      <li>
+        <label>iron-willed</label>
+        <description>[PAWN_nameDef]'s will is an iron shield. [PAWN_pronoun] keeps going through thick and thin, when others broke down long before.</description>
+        <degree>2</degree>
+        <statOffsets>
+          <MentalBreakThreshold>-0.18</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <label>steadfast</label>
+        <description>[PAWN_nameDef] is mentally tough and won't break down under stresses that would crack most people.</description>
+        <degree>1</degree>
+        <statOffsets>
+          <MentalBreakThreshold>-0.09</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <label>nervous</label>
+        <description>[PAWN_nameDef] tends to crack under pressure.</description>
+        <degree>-1</degree>
+        <statOffsets>
+          <MentalBreakThreshold>0.08</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <label>volatile</label>
+        <description>[PAWN_nameDef] is on a hair-trigger all the time. [PAWN_pronoun] is the first to break in any tough situation.</description>
+        <degree>-2</degree>
+        <statOffsets>
+          <MentalBreakThreshold>0.15</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef> -->
+
+        <def>Nerves</def>
+        <degree>2</degree>
+      </li>
+    </forcedTraits>
+  </AvaliMod.RVRBackstory>
+  
+  </defs>
