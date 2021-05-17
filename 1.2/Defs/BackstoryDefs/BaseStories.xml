@@ -133,14 +133,13 @@
         <amount>3</amount>
       </li>
     </skillGains>
-
   </AvaliMod.RVRBackstory>
 
   <AvaliMod.RVRBackstory ParentName = "MaleBase">
     <defName>NezaiStoryAdult</defName>
     <title>Nezai</title>
     <shortTitle>Nezai</shortTitle>
-    <storyDesc>After a catastrophic accident killed two of his packmates and crippled two more, as the healthy one, Nezai gave up his passions to become a mercenary in order to keep up with his pack's medical costs. He grew cold and bitter to most, and getting stranded here didn't help either.</storyDesc>
+    <storyDesc>After a catastrophic accident killed two of his packmates and crippled two more, as the healthy one, Nezai gave up his passions and became a mercenary in order to keep up with his pack's medical costs. He grew cold and bitter to most, and getting stranded here didn't help either.</storyDesc>
     <backstorySlot>Adulthood</backstorySlot>
     <spawnInCategories>
       <li>NezaiStory</li>
